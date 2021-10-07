@@ -1,8 +1,8 @@
+// import './style.scss';
 
 const ButtonChange = () => {
   return(
     <>
-    test
     </>
   )
 }
