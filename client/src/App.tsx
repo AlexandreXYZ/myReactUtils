@@ -7,7 +7,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ButtonChange width="60" height="24" onClick={test}/>
+      <ButtonChange width="20" height="10" onClick={test}/>
       
     </div>
   );
