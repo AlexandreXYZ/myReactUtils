@@ -4,14 +4,14 @@ import './style.css';
 interface props{
 	width?: string,
 	height?: string,
-	Click: Function,
+	onClick: Function,
 }
 
-const ButtonChange = ( {width, height, Click}: props ) => {
+const ButtonChange = ( {width, height, onClick}: props ) => {
   const [move, setMove] = useState('0');
 	const HandleClick = () => {
 		setMove(move === '1/1' ? '0' : '1/1');
-		Click();
+		onClick()
 	}
   return(
 		<>
