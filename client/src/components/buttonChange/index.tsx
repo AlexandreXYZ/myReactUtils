@@ -8,7 +8,7 @@ interface props{
 	onClick: Function,
 }
 
-const ButtonChange = ( {width, height, gaps, onClick}: props ) => {
+const ButtonChange = ( {width = 12, height = 6, gaps = 1, onClick}: props ) => {
   const [move, setMove] = useState('0');
 	const HandleClick = () => {
 		setMove(move === '1/1' ? '0' : '1/1');
