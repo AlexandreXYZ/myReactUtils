@@ -2,12 +2,13 @@ import { useState } from 'react';
 import './style.css';
 
 interface props{
-	width?: string,
-	height?: string,
+	width?: string | number,
+	height?: string | number,
+	gaps?: string | number,
 	onClick: Function,
 }
 
-const ButtonChange = ( {width, height, onClick}: props ) => {
+const ButtonChange = ( {width, height, gaps, onClick}: props ) => {
   const [move, setMove] = useState('0');
 	const HandleClick = () => {
 		setMove(move === '1/1' ? '0' : '1/1');
