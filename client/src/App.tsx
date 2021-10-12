@@ -1,4 +1,4 @@
-import ButtonChange from "./components/buttonChange";
+// import ButtonChange from "./components/buttonChange";
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ButtonChange width="20" height="10" onClick={test}/>
+      {/* <ButtonChange width="20" height="10" onClick={test}/> */}
       
     </div>
   );
