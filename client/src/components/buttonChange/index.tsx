@@ -1,9 +1,9 @@
-import './style.scss';
+import style from './style.module.scss';
 
 const ButtonChange = (  ) => {
   return(
 		<>
-		<div id="ButtonChange">
+		<div className={style.container}>
 			
 		</div>
 		</>
