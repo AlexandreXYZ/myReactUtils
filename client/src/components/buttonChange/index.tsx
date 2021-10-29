@@ -1,7 +1,10 @@
+import './style.scss';
+
 const ButtonChange = (  ) => {
   return(
 		<>
-		<div id="ButtonChange"  >
+		<div id="ButtonChange">
+			
 		</div>
 		</>
   )
