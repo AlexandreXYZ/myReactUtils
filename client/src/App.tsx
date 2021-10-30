@@ -1,10 +1,8 @@
-import ButtonChange from "./components/buttonChange";
-import './App.scss';
+import './App.module.scss';
 
 function App() {
   return (
     <div className="App">
-      <ButtonChange></ButtonChange>      
     </div>
   );
 }
