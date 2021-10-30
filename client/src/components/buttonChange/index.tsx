@@ -1,12 +1,15 @@
 import style from './style.module.scss';
 
-const ButtonChange = (  ) => {
+interface props {
+	onClick: Function
+}
+
+const ButtonChange = ( { onClick }: props ) => {
+	
   return(
-		<>
 		<div className={style.container}>
-			<input type="checkbox" id="checkbox" className={style.checkbox} />
+			<input type="checkbox" className={style.checkbox} onClick={() => onClick()} />
 		</div>
-		</>
   )
 }
 export default ButtonChange;
