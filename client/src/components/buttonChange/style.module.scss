@@ -1,7 +1,7 @@
 $size: 2rem;
 $width: 4rem;
 $borderWidth: 0.15rem;
-$gap: 0.1rem;
+$gap: 0.15rem;
 
 $transtionTime: 0.3s;
 $themeBefore: rgb(34, 44, 64);
@@ -30,7 +30,7 @@ $themeAfter: rgb(170, 190, 220);
     content: "";
 
     position: absolute;
-    left: calc($borderWidth + $gap + 0.1rem) ;
+    left: calc($borderWidth + $gap + $gap);
     top: 0.1rem;
     
     width: calc($size - 0.2rem);
@@ -42,7 +42,10 @@ $themeAfter: rgb(170, 190, 220);
     transition: $transtionTime;
   }
   &:checked::before{
-    left: calc($width - ($size + $borderWidth - ($gap - $gap - $gap)) );
+    left: calc($width - ($size + $borderWidth - ($gap - $gap - $gap)));
+    @if ($gap > .5rem){
+      left: calc($width - ($size + $borderWidth - ($gap - $gap - $gap - $gap)));
+    }
 
     background: $themeAfter;
     
