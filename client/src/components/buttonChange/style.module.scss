@@ -1,0 +1,51 @@
+$size: 2rem;
+$width: 4rem;
+$borderWidth: 0.15rem;
+$gap: 0.1rem;
+
+$transtionTime: 0.3s;
+$themeBefore: rgb(34, 44, 64);
+$themeAfter: rgb(170, 190, 220);
+
+.container{
+  position: relative;
+}
+.checkbox{
+  appearance: none;
+  
+  width: $width;
+  height: $size;
+  
+  border: $borderWidth solid $themeBefore;
+  border-radius: $width;
+
+  transition: $transtionTime;
+
+  &:checked{
+  border-color: $themeAfter;
+
+  transition: $transtionTime;
+  }
+  &::before{
+    content: "";
+
+    position: absolute;
+    left: calc($borderWidth + $gap + 0.1rem) ;
+    top: 0.1rem;
+    
+    width: calc($size - 0.2rem);
+    height: calc($size - 0.2rem);
+    background: $themeBefore;
+    
+    border-radius: 100%;
+
+    transition: $transtionTime;
+  }
+  &:checked::before{
+    left: calc($width - ($size + $borderWidth - ($gap - $gap - $gap)) );
+
+    background: $themeAfter;
+    
+    transition: $transtionTime;
+  }
+}
